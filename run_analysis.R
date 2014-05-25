@@ -153,11 +153,14 @@ for (i in 1:length(featureNames2)) {
 # other recodes
 featureNames2 <- gsub("BodyBody", "Body", featureNames2) # label misspellings
 featureNames2 <- sub("^t", "time.", featureNames2)  # initial t = time-based metric
-featureNames2 <- sub("^f", "freq.", featureNames2)  # initial f = frequency-based metric
+featureNames2 <- sub("^f", "frequency.", featureNames2)  # initial f = frequency-based metric
 # cleanup for acceptable R names
 featureNames2 <- make.names(featureNames2)          # strip illegal characters from names
-featureNames2 <- gsub("\\.+", ".", featureNames2)   # replace repeated dots by a single one
-featureNames2 <- sub("\\.$", "", featureNames2)     # strip trailing dot
+#featureNames2 <- gsub("\\.+", ".", featureNames2)   # replace repeated dots by a single one
+#featureNames2 <- sub("\\.$", "", featureNames2)     # strip trailing dot
+# following recodes follow Jeff Leek guideslines in week 4 "Editing Text Variables"
+featureNames2 <- gsub("\\.+", "", featureNames2)    # strip all dots from names
+featureNames2 <- tolower(featureNames2)             # convert names to all lowercase
 colnames(dfMergedSelection) <- featureNames2
 
 ## step 5) Creates a second, independent tidy data set with the average of each variable 

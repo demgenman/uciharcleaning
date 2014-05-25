@@ -42,9 +42,76 @@ Tidy files:
 * ./UCI HAR Dataset/merged/All_tidy.csv
 * ./UCI HAR Dataset/merged/All_tidy.txt
 
-Both files contain a header line with the following fields:
+Both files have a header line, and following fields and value ranges: 
 
-* "subject", "activity", "time.BodyAccelleration.Mean.X", "time.BodyAccelleration.Mean.Y", "time.BodyAccelleration.Mean.Z", "time.BodyAccelleration.StdDev.X", "time.BodyAccelleration.StdDev.Y", "time.BodyAccelleration.StdDev.Z", "time.GravityAccelleration.Mean.X", "time.GravityAccelleration.Mean.Y", "time.GravityAccelleration.Mean.Z", "time.GravityAccelleration.StdDev.X", "time.GravityAccelleration.StdDev.Y", "time.GravityAccelleration.StdDev.Z", "time.BodyAccellerationJerk.Mean.X", "time.BodyAccellerationJerk.Mean.Y", "time.BodyAccellerationJerk.Mean.Z", "time.BodyAccellerationJerk.StdDev.X", "time.BodyAccellerationJerk.StdDev.Y", "time.BodyAccellerationJerk.StdDev.Z", "time.BodyVelocity.Mean.X", "time.BodyVelocity.Mean.Y", "time.BodyVelocity.Mean.Z", "time.BodyVelocity.StdDev.X", "time.BodyVelocity.StdDev.Y", "time.BodyVelocity.StdDev.Z", "time.BodyVelocityJerk.Mean.X", "time.BodyVelocityJerk.Mean.Y", "time.BodyVelocityJerk.Mean.Z", "time.BodyVelocityJerk.StdDev.X", "time.BodyVelocityJerk.StdDev.Y", "time.BodyVelocityJerk.StdDev.Z", "time.BodyAccellerationMagnitude.Mean", "time.BodyAccellerationMagnitude.StdDev", "time.GravityAccellerationMagnitude.Mean", "time.GravityAccellerationMagnitude.StdDev", "time.BodyAccellerationJerkMagnitude.Mean", "time.BodyAccellerationJerkMagnitude.StdDev", "time.BodyVelocityMagnitude.Mean", "time.BodyVelocityMagnitude.StdDev", "time.BodyVelocityJerkMagnitude.Mean", "time.BodyVelocityJerkMagnitude.StdDev", "freq.BodyAccelleration.Mean.X", "freq.BodyAccelleration.Mean.Y", "freq.BodyAccelleration.Mean.Z", "freq.BodyAccelleration.StdDev.X", "freq.BodyAccelleration.StdDev.Y", "freq.BodyAccelleration.StdDev.Z", "freq.BodyAccellerationJerk.Mean.X", "freq.BodyAccellerationJerk.Mean.Y", "freq.BodyAccellerationJerk.Mean.Z", "freq.BodyAccellerationJerk.StdDev.X", "freq.BodyAccellerationJerk.StdDev.Y", "freq.BodyAccellerationJerk.StdDev.Z", "freq.BodyVelocity.Mean.X", "freq.BodyVelocity.Mean.Y", "freq.BodyVelocity.Mean.Z", "freq.BodyVelocity.StdDev.X", "freq.BodyVelocity.StdDev.Y", "freq.BodyVelocity.StdDev.Z", "freq.BodyAccellerationMagnitude.Mean", "freq.BodyAccellerationMagnitude.StdDev", "freq.BodyAccellerationJerkMagnitude.Mean", "freq.BodyAccellerationJerkMagnitude.StdDev", "freq.BodyVelocityMagnitude.Mean", "freq.BodyVelocityMagnitude.StdDev", "freq.BodyVelocityJerkMagnitude.Mean", "freq.BodyVelocityJerkMagnitude.StdDev"
+* subject: numeric; integer value range: 1 .. 30
+* activity: character; values: LAYING, SITTING, STANDING, WALKING, WALKING_DOWNSTAIRS, WALKING_UPSTAIRS
+* timebodyaccellerationmeanx: numeric; value range: -1 .. 1
+* timebodyaccellerationmeany: numeric; value range: -1 .. 1
+* timebodyaccellerationmeanz: numeric; value range: -1 .. 1
+* timebodyaccellerationstddevx: numeric; value range: -1 .. 1
+* timebodyaccellerationstddevy: numeric; value range: -1 .. 1
+* timebodyaccellerationstddevz: numeric; value range: -1 .. 1
+* timegravityaccellerationmeanx: numeric; value range: -1 .. 1
+* timegravityaccellerationmeany: numeric; value range: -1 .. 1
+* timegravityaccellerationmeanz: numeric; value range: -1 .. 1
+* timegravityaccellerationstddevx: numeric; value range: -1 .. 1
+* timegravityaccellerationstddevy: numeric; value range: -1 .. 1
+* timegravityaccellerationstddevz: numeric; value range: -1 .. 1
+* timebodyaccellerationjerkmeanx: numeric; value range: -1 .. 1
+* timebodyaccellerationjerkmeany: numeric; value range: -1 .. 1
+* timebodyaccellerationjerkmeanz: numeric; value range: -1 .. 1
+* timebodyaccellerationjerkstddevx: numeric; value range: -1 .. 1
+* timebodyaccellerationjerkstddevy: numeric; value range: -1 .. 1
+* timebodyaccellerationjerkstddevz: numeric; value range: -1 .. 1
+* timebodyvelocitymeanx: numeric; value range: -1 .. 1
+* timebodyvelocitymeany: numeric; value range: -1 .. 1
+* timebodyvelocitymeanz: numeric; value range: -1 .. 1
+* timebodyvelocitystddevx: numeric; value range: -1 .. 1
+* timebodyvelocitystddevy: numeric; value range: -1 .. 1
+* timebodyvelocitystddevz: numeric; value range: -1 .. 1
+* timebodyvelocityjerkmeanx: numeric; value range: -1 .. 1
+* timebodyvelocityjerkmeany: numeric; value range: -1 .. 1
+* timebodyvelocityjerkmeanz: numeric; value range: -1 .. 1
+* timebodyvelocityjerkstddevx: numeric; value range: -1 .. 1
+* timebodyvelocityjerkstddevy: numeric; value range: -1 .. 1
+* timebodyvelocityjerkstddevz: numeric; value range: -1 .. 1
+* timebodyaccellerationmagnitudemean: numeric; value range: -1 .. 1
+* timebodyaccellerationmagnitudestddev: numeric; value range: -1 .. 1
+* timegravityaccellerationmagnitudemean: numeric; value range: -1 .. 1
+* timegravityaccellerationmagnitudestddev: numeric; value range: -1 .. 1
+* timebodyaccellerationjerkmagnitudemean: numeric; value range: -1 .. 1
+* timebodyaccellerationjerkmagnitudestddev: numeric; value range: -1 .. 1
+* timebodyvelocitymagnitudemean: numeric; value range: -1 .. 1
+* timebodyvelocitymagnitudestddev: numeric; value range: -1 .. 1
+* timebodyvelocityjerkmagnitudemean: numeric; value range: -1 .. 1
+* timebodyvelocityjerkmagnitudestddev: numeric; value range: -1 .. 1
+* frequencybodyaccellerationmeanx: numeric; value range: -1 .. 1
+* frequencybodyaccellerationmeany: numeric; value range: -1 .. 1
+* frequencybodyaccellerationmeanz: numeric; value range: -1 .. 1
+* frequencybodyaccellerationstddevx: numeric; value range: -1 .. 1
+* frequencybodyaccellerationstddevy: numeric; value range: -1 .. 1
+* frequencybodyaccellerationstddevz: numeric; value range: -1 .. 1
+* frequencybodyaccellerationjerkmeanx: numeric; value range: -1 .. 1
+* frequencybodyaccellerationjerkmeany: numeric; value range: -1 .. 1
+* frequencybodyaccellerationjerkmeanz: numeric; value range: -1 .. 1
+* frequencybodyaccellerationjerkstddevx: numeric; value range: -1 .. 1
+* frequencybodyaccellerationjerkstddevy: numeric; value range: -1 .. 1
+* frequencybodyaccellerationjerkstddevz: numeric; value range: -1 .. 1
+* frequencybodyvelocitymeanx: numeric; value range: -1 .. 1
+* frequencybodyvelocitymeany: numeric; value range: -1 .. 1
+* frequencybodyvelocitymeanz: numeric; value range: -1 .. 1
+* frequencybodyvelocitystddevx: numeric; value range: -1 .. 1
+* frequencybodyvelocitystddevy: numeric; value range: -1 .. 1
+* frequencybodyvelocitystddevz: numeric; value range: -1 .. 1
+* frequencybodyaccellerationmagnitudemean: numeric; value range: -1 .. 1
+* frequencybodyaccellerationmagnitudestddev: numeric; value range: -1 .. 1
+* frequencybodyaccellerationjerkmagnitudemean: numeric; value range: -1 .. 1
+* frequencybodyaccellerationjerkmagnitudestddev: numeric; value range: -1 .. 1
+* frequencybodyvelocitymagnitudemean: numeric; value range: -1 .. 1
+* frequencybodyvelocitymagnitudestddev: numeric; value range: -1 .. 1
+* frequencybodyvelocityjerkmagnitudemean: numeric; value range: -1 .. 1
+* frequencybodyvelocityjerkmagnitudestddev: numeric; value range: -1 .. 1
 
 ### Code and transformations
 
@@ -93,8 +160,8 @@ Data frame dfMergedSelection, containing the merged subject, activity and select
 The used feature names are rather technical and not very reader-friendly. To improve readibility feature names are recoded. It is done as follows, and applies to the selected set of features. Character vector featureNames2 holds the feature names as they undergo recoding.
 
 * Variable recoding: Create data frame dfRecodeVariables, containing original feature name ("variable") and friendly feature name ("variable.friendly") . A third element, "description", is included but currently not used in the code. The data frame can be extended as needed. The elements contain patterns that are passed to the substitute functions gsub() and sub() as fixed text, replacing in each feature name occurrences of "variable" by "variable.friendly". 
-* Additional variable recoding: Some features in the original raw data set contained obvious misspellings. These are renamed, i.e. BodyBody becomes Body. Initial t and f are renamed to "time" and "freq", respectively.
-* All variables are made compliant with R naming convention, using make.names(). Repeated dots are reduced to a single dot, and any dot at the end of a name is removed.
+* Additional variable recoding: Some features in the original raw data set contained obvious misspellings. These are renamed, i.e. BodyBody becomes Body. Initial t and f are renamed to "time" and "frequency", respectively.
+* All variables are made compliant with R naming convention, using make.names(). Dots are removed and variable names are converted to lowercase.
 
 #### Step 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
@@ -103,3 +170,4 @@ Using the aggregate() function, the mean is calculated for the selected features
 ## History
 
 19 May 2014: Creation.
+25 May 2014: Updated, to comply with variable naming conventions as stated in Week 4 lecture on Editing Text Variables.
